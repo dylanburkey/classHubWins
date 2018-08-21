@@ -12,4 +12,10 @@
     'components/mobile-menu',
     'components/slideshow',
     'mq/media-queries',
+    'vendor/app',
     'components/custom';
+
+$color-sidebar: #82a0af;
+    .primary-header {
+        background: $color-sidebar;
+    }

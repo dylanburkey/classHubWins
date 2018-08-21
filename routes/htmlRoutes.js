@@ -40,7 +40,7 @@ module.exports = function (app) {
   // Load posts page
   app.get("/posts", function (req, res) {
     db.User.findAll({}).then(function (dbUsers) {
-      res.render("index", {
+      res.render("profile", {
         msg: "Welcome!",
         users: dbUsers
       });
@@ -49,6 +49,16 @@ module.exports = function (app) {
 
   // Load users page
   app.get("/users", function (req, res) {
+    db.User.findAll({}).then(function (dbUsers) {
+      res.render("index", {
+        msg: "Welcome!",
+        users: dbUsers
+      });
+    });
+  });
+
+   // Load users page
+   app.get("/register", function (req, res) {
     db.User.findAll({}).then(function (dbUsers) {
       res.render("index", {
         msg: "Welcome!",
